@@ -288,7 +288,8 @@ section {
         width: 280px;
         background: #0a0a0f;
 
-        display: flex;
+        display: none;
+        /*display: flex;*/
         justify-content: center;
         align-items: center;
 
@@ -736,6 +737,11 @@ button {
     header{
         height:90px
     }
+    .hero-grid{
+        text-align: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
 
     .problems-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -759,8 +765,9 @@ button {
     }
 
     .about-grid{
+        text-align: center;
         flex-direction: column;
-        margin-top: 50px;
+        row-gap: 30px;
     }
 
     /*.footer-inner{*/
