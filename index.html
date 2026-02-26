@@ -1,0 +1,861 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="uk">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <title>Нутриціолог | Персональний сайт</title>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">-->
+<!--    <style>-->
+<!--        :root{-->
+<!--            /*&#45;&#45;pink-light:#F8E6EC;*/-->
+<!--            &#45;&#45;pink-light:#0A1F32;-->
+<!--            /*&#45;&#45;pink:#EFB7C8;*/-->
+<!--            &#45;&#45;pink:#060A30;-->
+<!--            /*&#45;&#45;rose:#D98AA7;*/-->
+<!--            /*&#45;&#45;text:#2E2E2E;*/-->
+<!--            /*&#45;&#45;white:#FFFFFF;*/-->
+<!--            &#45;&#45;rose:#D98AA7;-->
+<!--            &#45;&#45;text:#2E2E2E;-->
+<!--            &#45;&#45;white:#F4ACC4;-->
+<!--        }-->
+<!--        *{box-sizing:border-box;margin:0;padding:0}-->
+<!--        body{-->
+<!--            font-family:'Inter',sans-serif;-->
+<!--            color:#FFFFFF;-->
+<!--            background:var(&#45;&#45;pink-light);-->
+<!--            line-height:1.6;-->
+<!--            scroll-behavior:smooth;-->
+<!--        }-->
+<!--        -->
+<!--        header{-->
+<!--            position:sticky;top:0;z-index:10;-->
+<!--            background:var(&#45;&#45;white);-->
+<!--            padding:40px 120px;-->
+<!--            display:flex;justify-content:space-between;align-items:center;-->
+<!--            box-shadow:0 4px 20px rgba(0,0,0,.05)-->
+<!--        }-->
+
+<!--        header nav a{-->
+<!--            margin-left:24px;-->
+<!--            text-decoration:none;color:var(&#45;&#45;text);font-weight:500-->
+<!--        }-->
+<!--        section{padding:100px 120px;max-width:1400px;margin:0 auto}-->
+<!--        h1,h2,h3{font-family:'Playfair Display',serif}-->
+<!--        .hero{-->
+<!--            display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center-->
+<!--        }-->
+<!--        .btn{-->
+<!--            display:inline-block;margin-top:24px;-->
+<!--            padding:14px 32px;border-radius:40px;-->
+<!--            background:var(&#45;&#45;rose);color:#fff;text-decoration:none;font-weight:500;-->
+<!--            border:1px solid #FF4C2B;-->
+<!--        }-->
+<!--        .btn:hover{-->
+<!--            border:3px solid #FF4C2B;-->
+<!--        }-->
+<!--        .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}-->
+<!--        .card{-->
+<!--            background:#595B82;padding:32px;border-radius:24px;-->
+<!--            box-shadow:0 10px 30px rgba(0,0,0,.06)-->
+<!--        }-->
+<!--        footer{-->
+<!--            background:var(&#45;&#45;rose);color:#fff;text-align:center;padding:60px-->
+<!--        }-->
+<!--        footer a{color:#fff;margin:0 10px;text-decoration:none}-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<header>-->
+<!--    <strong>Імʼя Прізвище — нутриціолог</strong>-->
+<!--    <nav>-->
+<!--        <a href="#hero">Головна</a>-->
+<!--        <a href="#problems">Проблеми</a>-->
+<!--        <a href="#services">Послуги</a>-->
+<!--        <a href="#about">Про мене</a>-->
+<!--        <a href="#reviews">Відгуки</a>-->
+<!--        <a href="recipes.html">Рецепти</a>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!--<section id="hero" class="hero">-->
+<!--    <div>-->
+<!--        <h1>Здорові стосунки з їжею без дієт і зривів</h1>-->
+<!--        <p>Я допомагаю позбутися переїдання, відновити баланс та полюбити своє тіло.</p>-->
+<!--        <a class="btn" href="https://t.me/username">Записатися в Telegram</a>-->
+<!--    </div>-->
+<!--    <img src="https://placehold.co/400x480" alt="Фото нутриціолога" style="border-radius:32px;width:100%">-->
+<!--</section>-->
+
+<!--<section id="problems">-->
+<!--    <h2>З якими проблемами я працюю</h2>-->
+<!--    <div class="cards">-->
+<!--        <div class="card">Переїдання та зриви</div>-->
+<!--        <div class="card">Жорсткі дієти</div>-->
+<!--        <div class="card">Набір або застій ваги</div>-->
+<!--        <div class="card">Втома та відсутність енергії</div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section id="services">-->
+<!--    <h2>Мої послуги</h2>-->
+<!--    <div class="cards">-->
+<!--        <div class="card">Консультація 1:1<br><a class="btn" href="#">Запис</a></div>-->
+<!--        <div class="card">Супровід 1 місяць<br><a class="btn" href="#">Запис</a></div>-->
+<!--        <div class="card">Супровід 3 місяці<br><a class="btn" href="#">Запис</a></div>-->
+<!--        <div class="card">Жіноче здоровʼя<br><a class="btn" href="#">Запис</a></div>-->
+<!--        <div class="card">Антипереїдання<br><a class="btn" href="#">Запис</a></div>-->
+<!--        <div class="card">Онлайн-програма<br><a class="btn" href="#">Запис</a></div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section id="about">-->
+<!--    <h2>Про мене</h2>-->
+<!--    <div class="hero">-->
+<!--        <div>-->
+<!--            <p>Мій шлях у нутриціології почався з власного досвіду. Я маю дипломи, сертифікації та понад X років практики. Моє завдання — допомогти вам знайти баланс без дієт і обмежень.</p>-->
+<!--            <ul>-->
+<!--                <li>Дипломований нутриціолог</li>-->
+<!--                <li>Сотні задоволених клієнтів</li>-->
+<!--                <li>Постійне навчання і практика</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <img src="https://placehold.co/320x420" alt="Про мене" style="border-radius:24px;width:100%">-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section id="plates">-->
+<!--    <h2>Моє харчування / мої тарілки</h2>-->
+<!--    <div style="position:relative;overflow:hidden;margin-top:40px">-->
+<!--        <div id="carousel" style="display:flex;gap:24px;transition:transform .4s ease">-->
+<!--            <img src="https://placehold.co/260x260" style="border-radius:24px">-->
+<!--            <img src="https://placehold.co/260x260" style="border-radius:24px">-->
+<!--            <img src="https://placehold.co/260x260" style="border-radius:24px">-->
+<!--            <img src="https://placehold.co/260x260" style="border-radius:24px">-->
+<!--        </div>-->
+<!--        <button onclick="slide(-1)" style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);border:none;background:#D98AA7;color:#fff;border-radius:50%;width:48px;height:48px;cursor:pointer">‹</button>-->
+<!--        <button onclick="slide(1)" style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);border:none;background:#D98AA7;color:#fff;border-radius:50%;width:48px;height:48px;cursor:pointer">›</button>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section id="reviews">-->
+<!--    <h2>Відгуки клієнтів</h2>-->
+<!--    <div class="cards">-->
+<!--        <div class="card">«Я вперше їм без страху»</div>-->
+<!--        <div class="card">«-7 кг без дієт»</div>-->
+<!--        <div class="card">«Зʼявилась енергія і любов до себе»</div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:100">-->
+<!--    <div style="background:#fff;border-radius:24px;max-width:600px;width:90%;padding:32px;position:relative">-->
+<!--        <button onclick="closeModal()" style="position:absolute;top:16px;right:16px;border:none;background:none;font-size:24px;cursor:pointer">×</button>-->
+<!--        <h2 id="modalTitle"></h2>-->
+<!--        <p id="modalText"></p>-->
+<!--        <h4>Інгредієнти:</h4>-->
+<!--        <ul>-->
+<!--            <li>Корисні жири</li>-->
+<!--            <li>Білок</li>-->
+<!--            <li>Повільні вуглеводи</li>-->
+<!--        </ul>-->
+<!--        <h4>Приготування:</h4>-->
+<!--        <p>Змішайте інгредієнти, приготуйте з любовʼю та без стресу 💗</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    let offset = 0;-->
+<!--    function slide(dir){-->
+<!--        const carousel = document.getElementById('carousel');-->
+<!--        offset += dir * 280;-->
+<!--        offset = Math.min(0, offset);-->
+<!--        offset = Math.max(offset, -560);-->
+<!--        carousel.style.transform = `translateX(${offset}px)`;-->
+<!--    }-->
+
+
+<!--    const modal = document.getElementById('modal');-->
+<!--    const titleEl = document.getElementById('modalTitle');-->
+<!--    const textEl = document.getElementById('modalText');-->
+
+<!--    document.querySelectorAll('.recipe').forEach(card => {-->
+<!--        card.addEventListener('click', () => {-->
+<!--            titleEl.innerText = card.querySelector('h3').innerText;-->
+<!--            textEl.innerText = card.querySelector('p').innerText;-->
+<!--            modal.style.display = 'flex';-->
+<!--        });-->
+<!--    });-->
+
+<!--    function closeModal(){modal.style.display='none'}-->
+<!--    modal.addEventListener('click', e => {if(e.target===modal) closeModal()})-->
+<!--</script>-->
+
+<!--<footer>-->
+<!--    <p>Турбота про себе — найкраща інвестиція 💗</p>-->
+<!--    <div>-->
+<!--        <a href="#">📷 Instagram</a>-->
+<!--        <a href="#">✈️ Telegram</a>-->
+<!--        <a href="#">🎵 TikTok</a>-->
+<!--    </div>-->
+<!--</footer>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нутриціолог</title>
+    <link rel="shortcut icon" href="./image/link_logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+
+    <a href="/index.html" class="header-title">
+        <div class="logo">
+            Ольга <span class="red-color">Яковина</span>
+        </div>
+    </a>
+
+    <nav class="header-menu">
+        <ul class="header-menu-list">
+            <li class="header-menu-item">
+                <a href="#hero" class="header-menu-link">Головна</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="#problems" class="header-menu-link ">Проблеми</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="#services" class="header-menu-link">Мої послуги</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="#about" class="header-menu-link">Про мене</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="#reviews" class="header-menu-link">Відгуки</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="/recipes.html" class=" button-header">Рецепти</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Burger -->
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</header>
+
+
+
+
+<!--    <header class="header">-->
+<!--        <a-->
+<!--                href="/index.html"-->
+<!--                class="header-title"-->
+<!--        >-->
+<!--            <div class="logo">-->
+<!--                Ольга <span>Яковина</span>-->
+<!--            </div>-->
+<!--        </a>-->
+
+
+<!--        <nav class="header-menu">-->
+<!--            <ul class="header-menu-list">-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="#hero"-->
+<!--                            class="header-menu-link is-current"-->
+<!--                    >Головна</a>-->
+<!--                </li>-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="#about"-->
+<!--                            class="header-menu-link"-->
+<!--                    >Про мене</a>-->
+<!--                </li>-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="#problems"-->
+<!--                            class="header-menu-link"-->
+<!--                    >Проблеми</a>-->
+<!--                </li>-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="#services"-->
+<!--                            class="header-menu-link"-->
+<!--                    >Послуги</a>-->
+<!--                </li>-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="#reviews"-->
+<!--                            class="header-menu-link"-->
+<!--                    >Відгуки</a>-->
+<!--                </li>-->
+<!--                <li class="header-menu-item">-->
+<!--                    <a-->
+<!--                            href="/recipes.html"-->
+<!--                            class="header-menu-link"-->
+<!--                    >Рецепти</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--        <div class="burger">-->
+<!--            <span>asdfasf</span>-->
+<!--            <span>sadfasdf</span>-->
+<!--            <span>sadfasdf</span>-->
+<!--        </div>-->
+
+<!--&lt;!&ndash;        <div class="container header-inner">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="logo">Імʼя Прізвище</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <nav>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#hero">Головна</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#problems">Проблеми</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#services">Послуги</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#about">Про мене</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#reviews">Відгуки</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="recipes.html">Рецепти</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </header>-->
+    <main class="content">
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <h2 class="circle">Здорове харчування без дієт</h2>
+                <div class="hero-grid">
+
+                    <div class="problem-card">
+                        <h3>Запис</h3>
+                        <p>Побудуємо систему харчування, яка працює саме для вас.</p>
+                        <a href="https://t.me/yakovyna1" class="btn">Записатись в Telegram</a>
+                    </div>
+
+                    <div class="hero-photo">
+                        <img
+                                src="./image/photo1.jpg"
+                                alt="A man pulling himself up on a horizontal bar"
+                                class="motivation-card-image"
+                                width="350"
+                                height="550"
+                                loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="problems-section reveal" id="problems">
+            <div class="container">
+
+                <h2 class="circle">
+                    Проблеми, які я допомагаю вирішити
+                </h2>
+
+                <div class="problems-grid">
+
+                    <div class="problem-card large">
+                        <p>
+                            Говоримо про харчування <span>легко</span>. Я пояснюю все просто, без
+                            складних термінів. Разом розбираємося з тим, що реально працює для вашого організму.
+                        </p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h3>Індивідуальний підхід</h3>
+                        <p>Кожен план адаптований саме під вас.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h3>Ваш спосіб життя</h3>
+                        <p>Враховую здоров’я, смаки та особисті цілі.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h3>Без жорстких дієт</h3>
+                        <p>Тільки збалансоване та реальне харчування.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h3>Поступові зміни</h3>
+                        <p>Маленькі кроки, які легко впровадити й утримати.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <h3>Підтримка і супровід</h3>
+                        <p>Я поруч на кожному етапі.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>Доступне харчування</h3>
+                        <p>Підбираємо продукти на різний бюджет</p>
+                    </div>
+
+                </div>
+
+                <div class="result-block">
+                    <p>
+                        Результат:
+                        <span>краще самопочуття, стабільна вага, енергія і здорові відносини з їжею.</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container reveal">
+                <h2 class="circle">Мої послуги</h2>
+                <div class="grid-3">
+                    <div class="service problem-card">
+<!--                        <img src="./image/racion.PNG" alt="Розробка індивідуального раціону">-->
+
+                        <h2 style="width: 400px">Індивідуальний раціон(7 днів)</h2>
+
+                        <h3>Кому підійде:</h3>
+                        <ul>
+                            <li><p>тим, хто хоче готове меню без самостійних підрахунків</p></li>
+                            <li><p>тим, хто прагне чіткої структури харчування</p></li>
+                            <li><p>тим, кому складно складати раціон самостійно</p></li>
+                            <li><p>тим, хто хоче врахувати бюджет і смакові вподобання</p></li>
+                        </ul>
+
+                        <h3>Що входить:</h3>
+                        <ul>
+                            <li><p>індивідуальне меню на 7 днів</p></li>
+                            <li><p>урахування ваших цілей (схуднення / набір / підтримка)</p></li>
+                            <li><p>адаптація під смакові вподобання</p></li>
+                            <li><p>варіанти заміни продуктів</p></li>
+                            <li><p>підрахунок КБЖВ</p></li>
+                            <li><p>рекомендації щодо режиму харчування</p></li>
+                        </ul>
+
+                        <h3>Як проходить:</h3>
+                        <ol>
+                            <li><p>Заповнення анкети та аналіз вашого способу життя.</p></li>
+                            <li><p>Розрахунок індивідуальної потреби в КБЖВ.</p></li>
+                            <li><p>Отримання готового збалансованого раціону у PDF-файлі.</p></li>
+                        </ol>
+
+                        <h3>Результат:</h3>
+                        <p>Готовий персональний план харчування на 7 днів, який легко вписати у ваш спосіб життя.</p>
+
+                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>
+                    </div>
+
+                    <div class="service problem-card">
+<!--                        <img src="./image/consult.PNG" alt="Індивідуальна консультація з харчування">-->
+
+                        <h2 style="width: 400px">Індивідуальна консультація</h2>
+
+                        <h3>Кому підійде:</h3>
+                        <ul>
+                            <li><p>тим, хто хоче налагодити харчування без дієт</p></li>
+                            <li><p>тим, у кого вага стоїть на місці</p></li>
+                            <li><p>тим, хто не розуміє причин відсутності результату</p></li>
+                            <li><p>тим, кому потрібен чіткий план дій</p></li>
+                        </ul>
+
+                        <h3>Що входить:</h3>
+                        <ul>
+                            <li><p>детальний аналіз анкети та способу життя</p></li>
+                            <li><p>розбір вашого поточного раціону</p></li>
+                            <li><p>визначення помилок, що гальмують прогрес</p></li>
+                            <li><p>персональні рекомендації без жорстких обмежень</p></li>
+                            <li><p>підрахунок КБЖВ (за потреби)</p></li>
+                            <li><p>підтримка 2 дні після консультації</p></li>
+                        </ul>
+
+                        <h3>Як проходить:</h3>
+                        <ol>
+                            <li><p>Заповнення анкети та надсилання фото харчування за 2–3 дні.</p></li>
+                            <li><p>Онлайн-зустріч 60 хвилин з повним розбором.</p></li>
+                            <li><p>Отримання PDF з рекомендаціями та планом дій.</p></li>
+                        </ol>
+
+                        <h3>Результат:</h3>
+                        <p>Чітке розуміння, що саме змінити для стабільного результату без стресу та обмежень.</p>
+
+                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>
+                    </div>
+
+                    <div class="service problem-card">
+<!--                        <img src="./image/online.PNG" alt="Індивідуальний онлайн-супровід">-->
+
+                        <h2 style="width: 400px">Індивідуальний онлайн-супровід (1 місяць)</h2>
+
+                        <h3>Кому підійде:</h3>
+                        <ul>
+                            <li><p>тим, хто хоче системні зміни</p></li>
+                            <li><p>тим, кому важлива регулярна корекція</p></li>
+                            <li><p>тим, кому складно тримати дисципліну самостійно</p></li>
+                            <li><p>тим, хто прагне довгострокового результату</p></li>
+                        </ul>
+
+                        <h3>Що входить:</h3>
+                        <ul>
+                            <li><p>первинна консультація</p></li>
+                            <li><p>персональний план харчування</p></li>
+                            <li><p>підрахунок КБЖВ</p></li>
+                            <li><p>щотижнева корекція раціону</p></li>
+                            <li><p>щоденна підтримка в Telegram</p></li>
+                            <li><p>контроль прогресу та мотивація</p></li>
+                        </ul>
+
+                        <h3>Як проходить:</h3>
+                        <ol>
+                            <li><p>Анкета та аналіз поточного харчування.</p></li>
+                            <li><p>Онлайн-зустріч і формування персонального плану.</p></li>
+                            <li><p>Щоденна підтримка та корекція протягом місяця.</p></li>
+                        </ol>
+
+                        <h3>Результат:</h3>
+                        <p>Поступові стабільні зміни в харчуванні, які переходять у звичку та дають довготривалий результат.</p>
+
+                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<!--        <section id="services">-->
+<!--            <div class="container reveal">-->
+<!--                <h2 class="circle">Мої послуги</h2>-->
+
+<!--                <div class="grid-3">-->
+
+<!--                    &lt;!&ndash; CARD 1 &ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="service problem-card">&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;                        <img src="./image/racion.PNG" alt="Розробка індивідуального раціону">&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <h2>Індивідуальний раціон</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <p class="service-subtitle">7 днів персонального меню</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <ul class="service-short">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li>Готове меню без підрахунків</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li>Підбір під ваші цілі</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li>Адаптація під бюджет</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <details class="service-details">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <summary>Детальніше</summary>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <h3>Що входить:</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Меню на 7 днів</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Розрахунок КБЖВ</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Варіанти заміни продуктів</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Рекомендації щодо режиму</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <h3>Як проходить:</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <ol>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Заповнення анкети</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Аналіз способу життя</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li>Отримання PDF-файлу</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </ol>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <h3>Результат:</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p>Готовий персональний план, який легко вписати у ваш стиль життя.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </details>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+
+<!--                    <div class="service problem-card">-->
+<!--&lt;!&ndash;                        <img src="./image/online.PNG" alt="Індивідуальний онлайн-супровід">&ndash;&gt;-->
+
+<!--                        <h2 style="width: 400px">Індивідуальний онлайн-супровід (1 місяць)</h2>-->
+
+<!--                        <h3>Кому підійде:</h3>-->
+<!--                        <ul>-->
+<!--                            <li><p>тим, хто хоче системні зміни</p></li>-->
+<!--                            <li><p>тим, кому важлива регулярна корекція</p></li>-->
+<!--                            <li><p>тим, кому складно тримати дисципліну самостійно</p></li>-->
+<!--                            <li><p>тим, хто прагне довгострокового результату</p></li>-->
+<!--                        </ul>-->
+
+<!--                        <h3>Що входить:</h3>-->
+<!--                        <ul>-->
+<!--                            <li><p>первинна консультація</p></li>-->
+<!--                            <li><p>персональний план харчування</p></li>-->
+<!--                            <li><p>підрахунок КБЖВ</p></li>-->
+<!--                            <li><p>щотижнева корекція раціону</p></li>-->
+<!--                            <li><p>щоденна підтримка в Telegram</p></li>-->
+<!--                            <li><p>контроль прогресу та мотивація</p></li>-->
+<!--                        </ul>-->
+
+<!--                        <h3>Як проходить:</h3>-->
+<!--                        <ol>-->
+<!--                            <li><p>Анкета та аналіз поточного харчування.</p></li>-->
+<!--                            <li><p>Онлайн-зустріч і формування персонального плану.</p></li>-->
+<!--                            <li><p>Щоденна підтримка та корекція протягом місяця.</p></li>-->
+<!--                        </ol>-->
+
+<!--                        <h3>Результат:</h3>-->
+<!--                        <p>Поступові стабільні зміни в харчуванні, які переходять у звичку та дають довготривалий результат.</p>-->
+
+<!--                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash; CARD 2 &ndash;&gt;-->
+<!--                    <div class="service problem-card">-->
+
+<!--                        <img src="./image/consult.PNG" alt="Індивідуальна консультація">-->
+
+<!--                        <h2>Індивідуальна консультація</h2>-->
+<!--                        <p class="service-subtitle">Онлайн 60 хвилин</p>-->
+
+<!--                        <ul class="service-short">-->
+<!--                            <li>Аналіз харчування</li>-->
+<!--                            <li>Виявлення помилок</li>-->
+<!--                            <li>Персональний план дій</li>-->
+<!--                        </ul>-->
+
+<!--                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>-->
+
+<!--                        <details class="service-details">-->
+<!--                            <summary>Детальніше</summary>-->
+
+<!--                            <h3>Що входить:</h3>-->
+<!--                            <ul>-->
+<!--                                <li>Детальний розбір анкети</li>-->
+<!--                                <li>Аналіз поточного раціону</li>-->
+<!--                                <li>Рекомендації без жорстких дієт</li>-->
+<!--                                <li>Підтримка 2 дні після зустрічі</li>-->
+<!--                            </ul>-->
+
+<!--                            <h3>Як проходить:</h3>-->
+<!--                            <ol>-->
+<!--                                <li>Анкета + фото харчування</li>-->
+<!--                                <li>Zoom-зустріч 60 хв</li>-->
+<!--                                <li>PDF з рекомендаціями</li>-->
+<!--                            </ol>-->
+
+<!--                            <h3>Результат:</h3>-->
+<!--                            <p>Чітке розуміння змін для стабільного результату.</p>-->
+<!--                        </details>-->
+
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash; CARD 3 &ndash;&gt;-->
+<!--                    <div class="service problem-card">-->
+
+<!--                        <img src="./image/online.PNG" alt="Індивідуальний онлайн-супровід">-->
+
+<!--                        <h2>Онлайн-супровід</h2>-->
+<!--                        <p class="service-subtitle">1 місяць підтримки</p>-->
+
+<!--                        <ul class="service-short">-->
+<!--                            <li>Персональний план</li>-->
+<!--                            <li>Щотижнева корекція</li>-->
+<!--                            <li>Щоденна підтримка</li>-->
+<!--                        </ul>-->
+
+<!--                        <a href="https://t.me/yakovyna1" class="btn small">Записатись</a>-->
+
+<!--                        <details class="service-details">-->
+<!--                            <summary>Детальніше</summary>-->
+
+<!--                            <h3>Що входить:</h3>-->
+<!--                            <ul>-->
+<!--                                <li>Первинна консультація</li>-->
+<!--                                <li>Розрахунок КБЖВ</li>-->
+<!--                                <li>Контроль прогресу</li>-->
+<!--                                <li>Мотивація та підтримка</li>-->
+<!--                            </ul>-->
+
+<!--                            <h3>Як проходить:</h3>-->
+<!--                            <ol>-->
+<!--                                <li>Анкета</li>-->
+<!--                                <li>Формування плану</li>-->
+<!--                                <li>Підтримка протягом місяця</li>-->
+<!--                            </ol>-->
+
+<!--                            <h3>Результат:</h3>-->
+<!--                            <p>Стабільні зміни, що переходять у звичку.</p>-->
+<!--                        </details>-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+
+
+
+
+
+        <section id="about" class="about reveal">
+            <div class="container">
+                <h2 class="circle">Про мене</h2>
+                <div class="about-grid">
+                    <div>
+                        <div class="problem-card">
+                            <!--                        <h3>Без жорстких дієт</h3>-->
+                            <p><span class="red-color">Я</span> — нутриціолог і людина, яка щиро вірить у свідоме харчування без крайнощів та заборон.
+                                Для мене їжа — це не про обмеження. Це про турботу, любов і повагу до свого тіла. Саме через харчування ми можемо проявляти до себе увагу щодня — підтримувати, наповнювати та відновлювати.
+                                Мій власний шлях — мінус 10 кг завдяки збалансованому раціону без жорстких дієт. Я їм солодке, не забороняю собі улюблені продукти та не живу в режимі «не можна». Бо здорове харчування — це не тимчасова дієта, а стиль життя, який приносить задоволення та результат.
+                                Я допомагаю знайти баланс, навчитися чути своє тіло та вибудувати систему харчування, яка працює саме для вас — без стресу та зривів.</p>
+                            <button class="btn small" onclick="openModal()">Мої дипломи</button>
+                        </div>
+
+                    </div>
+                    <div>
+                        <img
+                                src="./image/image3.jpg"
+                                alt="A man pulling himself up on a horizontal bar"
+                                class="motivation-card-image"
+                                width="420"
+                                height="550"
+                                loading="lazy"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reviews" class="section reveal">
+            <div class="container">
+                <h2 class="circle">Відгуки</h2>
+                <div class="reviews-wrapper">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <div class="reviews">
+
+                            <button class="reviews-button" data-modal="review" onclick="openModalReview()">
+                                <div class="service problem-card review-card">
+                                    <img
+                                            src="./image/reviews/review_1.jpg" alt="Розробка індивідуального раціону"
+                                            class="motivation-card-image"
+
+                                    >
+
+                                    <h3 class="h3-red">Результат:</h3>
+                                    <p class="p">Дуже задоволена результатом. -7кг за 2 місяці!</p>
+
+                                </div>
+                            </button>
+                        </div>
+                        <div class="reviews">
+
+                            <button class="reviews-button" data-modal="review" onclick="openModalReview()">
+                                <div class="service problem-card review-card">
+                                    <img
+                                            src="./image/reviews/review_1.jpg" alt="Розробка індивідуального раціону"
+                                            class="motivation-card-image"
+
+                                    >
+
+                                    <h3 class="h3-red">Результат:</h3>
+                                    <p class="p">Дуже задоволена результатом. -7кг за 2 місяці!</p>
+
+                                </div>
+                            </button>
+                        </div>
+                        <div class="reviews">
+
+                            <button class="reviews-button" data-modal="review" onclick="openModalReview()">
+                                <div class="service problem-card review-card">
+                                    <img
+                                            src="./image/reviews/review_1.jpg" alt="Розробка індивідуального раціону"
+                                            class="motivation-card-image"
+
+                                    >
+
+                                    <h3 class="h3-red">Результат:</h3>
+                                    <p class="p">Дуже задоволена результатом. -7кг за 2 місяці!</p>
+
+                                </div>
+                            </button>
+                        </div>
+                        <div class="reviews">
+
+                            <button class="reviews-button" data-modal="review" onclick="openModalReview()">
+                                <div class="service problem-card review-card">
+                                    <img
+                                            src="./image/reviews/review_1.jpg" alt="Розробка індивідуального раціону"
+                                            class="motivation-card-image"
+
+                                    >
+
+                                    <h3 class="h3-red">Результат:</h3>
+                                    <p class="p">Дуже задоволена результатом. -7кг за 2 місяці!</p>
+
+                                </div>
+                            </button>
+                        </div>
+                        <div class="reviews">
+
+                            <button class="reviews-button" data-modal="review" onclick="openModalReview()">
+                                <div class="service problem-card review-card">
+                                    <img
+                                            src="./image/reviews/review_1.jpg" alt="Розробка індивідуального раціону"
+                                            class="motivation-card-image"
+
+                                    >
+
+                                    <h3 class="h3-red">Результат:</h3>
+                                    <p class="p">Дуже задоволена результатом. -7кг за 2 місяці!</p>
+
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-buttons">
+                    <button class="reviews-button-pagination" id="prev">←</button>
+                    <button class="reviews-button-pagination" id="next">→</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="https://t.me/yakovyna1" class="floating-cta">Telegram</a>
+    <footer>
+        <div class="container footer-inner">
+            <p>Харчування — це турбота про себе</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/olga_yakovyna_/"><span>📷</span> Instagram</a>
+                <a href="https://t.me/yakovyna1"><span>✈</span> Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="review" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModalReview()" class="close">×</span>
+            <img src="./image/reviews/review_1.jpg"
+                height="500px"
+            >
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">×</span>
+            <img class="modal-img" src="image/certificates/certificate_1.jpg"
+            >
+            <img class="modal-img" src="image/certificates/certificate_2.jpg"
+            >
+            <img class="modal-img" src="image/certificates/certificate_3.png"
+            >
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
