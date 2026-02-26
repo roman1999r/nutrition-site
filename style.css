@@ -581,8 +581,19 @@ section{
 
 
 
-footer{padding:60px 0;background:black}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
+footer{
+    padding:60px 0;
+    background:black
+}
+
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+
 .socials a{color:var(--gray);margin-left:20px;text-decoration:none}
 
 .modal{
@@ -625,6 +636,7 @@ footer{padding:60px 0;background:black}
     position: fixed;
     bottom: 30px;
     right: 30px;
+    /*margin-bottom: 120px;*/
     /*background: #ff003c;*/
     background: #ff003c;
     padding: 15px 25px;
@@ -736,6 +748,24 @@ button {
     /*    grid-template-columns: 1fr;*/
     /*}*/
 
+    .grid-3{
+        flex-direction: column;
+
+    }
+    .problem-card{
+        margin-inline: 100px;
+        margin-top: 50px;
+
+    }
+
+    .about-grid{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    /*.footer-inner{*/
+    /*    margin-top: 100px;*/
+    /*}*/
 }
 
 /*@media(max-width:768px){*/
@@ -752,4 +782,6 @@ button {
     .problems-grid {
         grid-template-columns: 1fr;
     }
+
+
 }
