@@ -220,3 +220,23 @@ document.querySelectorAll(".header-menu-link").forEach(link => {
         menu.classList.remove("active");
     });
 });
+
+
+// window.addEventListener('scroll', function() {
+//     var button = document.querySelector('.floating-cta');
+//     var footer = document.querySelector('.footer');
+//     var buttonHeight = button.offsetHeight;
+//     var footerTop = footer.offsetTop;
+//     var scrollPosition = window.scrollY + window.innerHeight;
+//
+//     // Якщо скрол підійшов до футера, робимо кнопку абсолютною
+//     if (scrollPosition > footerTop + 20) { // +20 - невеликий відступ
+//         button.style.position = 'absolute';
+//         button.style.top = (footerTop - buttonHeight - 30) + 'px'; // 20 - відступ
+//     } else {
+//         // Повертаємо фіксовану позицію
+//         button.style.position = 'fixed';
+//         // button.style.top = 'auto';
+//         button.style.bottom = '30px';
+//     }
+// });
