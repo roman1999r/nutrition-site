@@ -969,19 +969,22 @@
             <div class="container">
                 <h2 class="circle">Генератор страв</h2>
 
-                <select id="mealType">
-                    <option value="all">Всі</option>
-                    <option value="breakfast">Сніданок</option>
-                    <option value="lunch">Перекус</option>
-                    <option value="dinner">Обід</option>
-                    <option value="snack">Вечеря</option>
-                </select>
+                <div class="meal-generator-content">
 
-                <input type="number" id="maxCalories" placeholder="Максимальні калорії">
+                    <select id="mealType">
+                        <option value="all">Всі</option>
+                        <option value="breakfast">Сніданок</option>
+                        <option value="lunch">Перекус</option>
+                        <option value="dinner">Обід</option>
+                        <option value="snack">Вечеря</option>
+                    </select>
 
-                <button onclick="generateMeal()">Generate Meal</button>
+                    <input type="number" id="maxCalories" placeholder="Максимальні калорії">
 
-                <div id="mealResult"></div>
+                    <button class="btn" onclick="generateMeal()">Згенерувати </button>
+
+                    <div id="mealResult"></div>
+                </div>
             </div>
         </section>
 

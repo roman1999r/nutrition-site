@@ -888,8 +888,11 @@ button {
         width:100%;
         height:220px;
     }
-
-
+    .motivation-card-image{
+        width: 350px;
+        height: 450px;
+        border-radius: 16px;
+    }
 
     /*.footer-inner{*/
     /*    margin-top: 100px;*/
@@ -991,9 +994,16 @@ section {
     text-align: center;
 }
 
+.meal-generator-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 select, input {
     width: 90%;
     max-width: 300px;
+    margin-bottom: 20px;
 }
 
 #mealResult {
