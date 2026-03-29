@@ -222,6 +222,25 @@ document.querySelectorAll(".header-menu-link").forEach(link => {
 });
 
 
+
+function calculateCalories() {
+    const weight = document.getElementById("weight").value;
+    const height = document.getElementById("height").value;
+    const age = document.getElementById("age").value;
+
+    if (!weight || !height || !age) {
+        document.getElementById("result").innerText = "Fill all fields!";
+        return;
+    }
+
+    const calories = 10 * weight + 6.25 * height - 5 * age + 5;
+
+    document.getElementById("result").innerText =
+        "Your daily calories: " + Math.round(calories);
+}
+
+
+
 // window.addEventListener('scroll', function() {
 //     var button = document.querySelector('.floating-cta');
 //     var footer = document.querySelector('.footer');
@@ -240,3 +259,111 @@ document.querySelectorAll(".header-menu-link").forEach(link => {
 //         button.style.bottom = '30px';
 //     }
 // });
+
+
+
+const meals = [
+    {
+        name: "Oatmeal with berries",
+        type: "breakfast",
+        calories: 250,
+        img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+    },
+    {
+        name: "Avocado toast",
+        type: "breakfast",
+        calories: 300,
+        img: "https://images.unsplash.com/photo-1505253216365-3f3b5f1f6d5d"
+    },
+    {
+        name: "Grilled chicken salad",
+        type: "lunch",
+        calories: 400,
+        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+    },
+    {
+        name: "Salmon with rice",
+        type: "dinner",
+        calories: 550,
+        img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
+    },
+    {
+        name: "Protein bar",
+        type: "snack",
+        calories: 200,
+        img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+    },
+    {
+        name: "Greek yogurt with honey",
+        type: "snack",
+        calories: 180,
+        img: "https://images.unsplash.com/photo-1571212515416-fef01fc43637"
+    },
+    {
+        name: "Pasta with vegetables",
+        type: "lunch",
+        calories: 450,
+        img: "https://images.unsplash.com/photo-1525755662778-989d0524087e"
+    },
+    {
+        name: "Steak with potatoes",
+        type: "dinner",
+        calories: 700,
+        img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+    }
+];
+
+function generateMeal() {
+    const type = document.getElementById("mealType").value;
+    const maxCal = parseInt(document.getElementById("maxCalories").value);
+
+    let filtered = meals;
+
+    if (type !== "all") {
+        filtered = filtered.filter(meal => meal.type === type);
+    }
+
+    if (maxCal) {
+        filtered = filtered.filter(meal => meal.calories <= maxCal);
+    }
+
+    if (filtered.length === 0) {
+        document.getElementById("mealResult").innerHTML = "No meals found 😢";
+        return;
+    }
+
+    const randomMeal = filtered[Math.floor(Math.random() * filtered.length)];
+
+    document.getElementById("mealResult").innerHTML = `
+    <div class="meal-card">
+      <h3>${randomMeal.name}</h3>
+      <p>${randomMeal.calories} kcal</p>
+      <img style="width: 400px; height: 410px" src="${randomMeal.img}">
+    </div>
+  `;
+}
+
+
+
+
+
+
+
+
+
+
+let progress = 0;
+const bar = document.getElementById("progress-bar");
+
+const interval = setInterval(() => {
+    progress += 10;
+    bar.style.width = progress + "%";
+
+    if (progress >= 100) {
+        clearInterval(interval);
+
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+        }, 300);
+    }
+}, 150);
