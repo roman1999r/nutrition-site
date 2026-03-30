@@ -1,17 +1,23 @@
+import {meals} from "./meals-list.js"
+
+
+
+
 // Модальне вікно
-function openModal(){
+
+window.openModal = function (){
     document.getElementById("modal").style.display="flex";
 }
-function closeModal(){
+window.closeModal = function (){
     document.getElementById("modal").style.display="none";
 }
 
 
 // Модальне вікно
-function openModalReview(){
+window.openModalReview = function (){
     document.getElementById("review").style.display="flex";
 }
-function closeModalReview(){
+window.closeModalReview = function () {
     document.getElementById("review").style.display="none";
 }
 
@@ -109,56 +115,121 @@ document.querySelectorAll(".reveal").forEach(el=>{
 //     reviews.style.transform = `translateX(-${index * 100}%)`;
 // };
 
+//КАРУСЕЛЬ
+// const track = document.getElementById("reviewsTrack");
+// const cards = document.querySelectorAll(".reviews");
+// const prevBtn = document.getElementById("prev");
+// const nextBtn = document.getElementById("next");
+//
+// let index = 0;
+//
+// function getVisibleCards() {
+//     if (window.innerWidth <= 600) return 1;
+//     if (window.innerWidth <= 992) return 2;
+//     return 3;
+// }
+//
+// function updateCarousel() {
+//     const visible = getVisibleCards();
+//     const cardWidth = track.offsetWidth / visible;
+//     track.style.transform = `translateX(-${index * cardWidth}px)`;
+// }
+//
+// nextBtn.addEventListener("click", () => {
+//     const visible = getVisibleCards();
+//
+//     if (index >= cards.length - visible) {
+//         index = 0; // повертається на початок
+//     } else {
+//         index++;
+//     }
+//
+//     updateCarousel();
+// });
+//
+// prevBtn.addEventListener("click", () => {
+//     const visible = getVisibleCards();
+//
+//     if (index <= 0) {
+//         index = cards.length - visible; // переходить на кінець
+//     } else {
+//         index--;
+//     }
+//
+//     updateCarousel();
+// });
+//
+// window.addEventListener("resize", () => {
+//     index = 0;
+//     updateCarousel();
+// });
+//
+// updateCarousel();
+/////////
 
-const track = document.getElementById("reviewsTrack");
-const cards = document.querySelectorAll(".reviews");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
+const tracks = document.getElementById('reviewsTrack');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
 
-let index = 0;
+const scrollAmount = 320; // ширина картки + gap
 
-function getVisibleCards() {
-    if (window.innerWidth <= 600) return 1;
-    if (window.innerWidth <= 992) return 2;
-    return 3;
-}
-
-function updateCarousel() {
-    const visible = getVisibleCards();
-    const cardWidth = track.offsetWidth / visible;
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-}
-
-nextBtn.addEventListener("click", () => {
-    const visible = getVisibleCards();
-
-    if (index >= cards.length - visible) {
-        index = 0; // повертається на початок
-    } else {
-        index++;
-    }
-
-    updateCarousel();
+next.addEventListener('click', () => {
+    tracks.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
 });
 
-prevBtn.addEventListener("click", () => {
-    const visible = getVisibleCards();
 
-    if (index <= 0) {
-        index = cards.length - visible; // переходить на кінець
-    } else {
-        index--;
-    }
-
-    updateCarousel();
+prev.addEventListener('click', () => {
+    tracks.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+    });
 });
 
-window.addEventListener("resize", () => {
-    index = 0;
-    updateCarousel();
+const track = document.getElementById('reviewsTrack');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
 });
 
-updateCarousel();
+track.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+track.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+track.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    track.scrollLeft = scrollLeft - walk;
+});
+
+// 📱 Touch (мобілка)
+track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = track.scrollLeft;
+});
+
+track.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 1.5;
+    track.scrollLeft = scrollLeft - walk;
+});
+
+
+
 
 
 
@@ -240,6 +311,21 @@ function calculateCalories() {
 }
 
 
+// Telegram for footer
+const btn = document.querySelector('.floating-cta');
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll', () => {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (footerTop < windowHeight - 80) {
+        btn.style.bottom = (windowHeight - footerTop + 5) + 'px';
+    } else {
+        btn.style.bottom = '20px';
+    }
+});
+
 
 // window.addEventListener('scroll', function() {
 //     var button = document.querySelector('.floating-cta');
@@ -262,58 +348,58 @@ function calculateCalories() {
 
 
 
-const meals = [
-    {
-        name: "Oatmeal with berries",
-        type: "breakfast",
-        calories: 250,
-        img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
-    },
-    {
-        name: "Avocado toast",
-        type: "breakfast",
-        calories: 300,
-        img: "https://images.unsplash.com/photo-1505253216365-3f3b5f1f6d5d"
-    },
-    {
-        name: "Grilled chicken salad",
-        type: "lunch",
-        calories: 400,
-        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
-    },
-    {
-        name: "Salmon with rice",
-        type: "dinner",
-        calories: 550,
-        img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
-    },
-    {
-        name: "Protein bar",
-        type: "snack",
-        calories: 200,
-        img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
-    },
-    {
-        name: "Greek yogurt with honey",
-        type: "snack",
-        calories: 180,
-        img: "https://images.unsplash.com/photo-1571212515416-fef01fc43637"
-    },
-    {
-        name: "Pasta with vegetables",
-        type: "lunch",
-        calories: 450,
-        img: "https://images.unsplash.com/photo-1525755662778-989d0524087e"
-    },
-    {
-        name: "Steak with potatoes",
-        type: "dinner",
-        calories: 700,
-        img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
-    }
-];
+// const meals = [
+//     {
+//         name: "Oatmeal with berries",
+//         type: "breakfast",
+//         calories: 250,
+//         img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+//     },
+//     {
+//         name: "Avocado toast",
+//         type: "breakfast",
+//         calories: 300,
+//         img: "https://images.unsplash.com/photo-1505253216365-3f3b5f1f6d5d"
+//     },
+//     {
+//         name: "Grilled chicken salad",
+//         type: "lunch",
+//         calories: 400,
+//         img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+//     },
+//     {
+//         name: "Salmon with rice",
+//         type: "dinner",
+//         calories: 550,
+//         img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
+//     },
+//     {
+//         name: "Protein bar",
+//         type: "snack",
+//         calories: 200,
+//         img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+//     },
+//     {
+//         name: "Greek yogurt with honey",
+//         type: "snack",
+//         calories: 180,
+//         img: "https://images.unsplash.com/photo-1571212515416-fef01fc43637"
+//     },
+//     {
+//         name: "Pasta with vegetables",
+//         type: "lunch",
+//         calories: 450,
+//         img: "https://images.unsplash.com/photo-1525755662778-989d0524087e"
+//     },
+//     {
+//         name: "Steak with potatoes",
+//         type: "dinner",
+//         calories: 700,
+//         img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+//     }
+// ];
 
-function generateMeal() {
+window.generateMeal = function () {
     const type = document.getElementById("mealType").value;
     const maxCal = parseInt(document.getElementById("maxCalories").value);
 
@@ -335,13 +421,13 @@ function generateMeal() {
     const randomMeal = filtered[Math.floor(Math.random() * filtered.length)];
 
     document.getElementById("mealResult").innerHTML = `
-    <div class="meal-card">
-      <h3>${randomMeal.name}</h3>
-      <p>${randomMeal.calories} kcal</p>
-      <img style="width: 400px; height: 410px" src="${randomMeal.img}">
-    </div>
-  `;
-}
+      <div class="meal-card">
+        <h3>${randomMeal.name}</h3>
+        <p>${randomMeal.calories} kcal</p>
+        <img class="meal-generator-img" src="${randomMeal.img}">
+      </div>
+    `;
+};
 
 
 
