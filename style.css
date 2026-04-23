@@ -13,7 +13,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-    font-family:Inter;
+    /*font-family:Inter;*/
     background: var(--black);
     color:white
 }
@@ -184,9 +184,7 @@ section {
 .header-menu-item:nth-last-child(1) {
     padding-bottom: 15px;
 }
-.header-menu-item:nth-last-child(5) {
-    margin-top: 15px;
-}
+
 .header-menu-link {
     position: relative;
     text-decoration: none;
@@ -207,6 +205,48 @@ section {
     transition: 0.3s;
 }
 
+.description-text{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.text-correct{
+    margin-top: 35px;
+}
+
+.arrow {
+    margin-top: 35px;
+    font-size: 60px;
+    color: var(--red);
+    text-shadow:
+            0 0 5px #ff003c,
+            0 0 10px #ff003c,
+            0 0 20px #ff003c;
+
+    animation: neonMove 1.5s infinite;
+}
+
+@keyframes neonMove {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(10px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.problems-section .btn {
+    margin-top: 35px;
+}
 
 .header-menu-link:hover {
     color: white;
@@ -329,7 +369,7 @@ section {
 nav a{color:var(--gray);margin-left:20px;text-decoration:none}
 
 section{
-    padding:100px 0;
+    padding:60px 0;
     /*background:var(--dark)*/
 }
 
@@ -373,7 +413,7 @@ section{
 /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');*/
 
 
- /*===== Заголовок ===== */
+/*===== Заголовок ===== */
 
 .section-title {
     position: relative;
@@ -482,6 +522,9 @@ section{
     font-weight: 600;
 }
 
+
+
+
 /* ===== Результат ===== */
 
 .result-block {
@@ -569,12 +612,12 @@ section{
 
 
 
-.service img{
-    width:400px;
-    height:160px;
-    object-fit:cover;
-    margin-bottom:15px
-}
+/*.service img{*/
+/*    width:400px;*/
+/*    height:160px;*/
+/*    object-fit:cover;*/
+/*    margin-bottom:15px*/
+/*}*/
 
 .service h3{
     margin-top:20px;
@@ -842,6 +885,90 @@ button {
 }
 
 
+.book-img{
+    width: 100%;
+    margin-top: 50px;
+}
+.book-text{
+    margin-bottom: 25px;
+}
+
+/*ЦІНА*/
+.price-box {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* СТАРА ЦІНА */
+.old-price-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.old-price {
+    font-size: 48px;
+    color: var(--white);
+    position: relative;
+}
+
+/* красива лінія перекреслення */
+.old-price::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    width: 120%;
+    height: 2px;
+    background: #ff003c;
+    transform: rotate(-5deg);
+}
+
+/* ЗНИЖКА */
+.discount {
+    position: absolute;
+    top: -10px;
+    right: -40px;
+    background: #ff003c;
+    color: white;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+
+    box-shadow: 0 0 10px #ff003c;
+}
+
+/* НОВА ЦІНА */
+.new-price {
+    margin-top: 10px;
+    font-size: 56px;
+    font-weight: bold;
+    color: #ff003c;
+
+    text-shadow:
+            0 0 5px #ff003c,
+            0 0 10px #ff003c,
+            0 0 20px #ff003c;
+
+    animation: glow 0.5s infinite alternate;
+}
+
+/* анімація */
+@keyframes glow {
+    from {
+        text-shadow:
+                0 0 5px #ff003c,
+                0 0 10px #ff003c;
+    }
+    to {
+        text-shadow:
+                0 0 10px #ff003c,
+                0 0 20px #ff003c,
+                0 0 30px #ff003c;
+    }
+}
+
+
 /* tablet */
 @media (max-width: 992px) {
     .reviews {
@@ -859,6 +986,9 @@ button {
     header{
         height:90px
     }
+    .header-menu-item:nth-last-child(5) {
+        margin-top: 15px;
+    }
     .circle{
         margin-bottom: 50px;
         font-size: 28px;
@@ -866,7 +996,7 @@ button {
     .circle::before{
 
         inset:-20px -35px;
-;
+    ;
     }
     .hero-grid{
         text-align: center;
@@ -1047,7 +1177,7 @@ section {
 }
 
 .progress-bar {
-    width: 0%;
+    width: 0;
     height: 100%;
     background: white;
     transition: width 0.3s;
