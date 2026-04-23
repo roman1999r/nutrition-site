@@ -1091,6 +1091,10 @@ button {
         justify-content: center;
         align-items: center;
     }
+    .book-img{
+        width: 300px;
+
+    }
 }
 
 /*@media(max-width:768px){*/
