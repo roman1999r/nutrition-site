@@ -44,6 +44,7 @@ html{scroll-behavior:smooth}
 }
 section {
     scroll-margin-top: 80px;
+    padding:60px 0;
 }
 
 /*header{height:120px;display:flex;align-items:center}*/
@@ -176,7 +177,7 @@ section {
 
 .header-menu-list {
     display: flex;
-    gap: 50px;
+    gap: 10px;
     margin-right: 50px;
     list-style: none;
 }
@@ -368,10 +369,10 @@ section {
 
 nav a{color:var(--gray);margin-left:20px;text-decoration:none}
 
-section{
-    padding:60px 0;
-    /*background:var(--dark)*/
-}
+/*section{*/
+/*    padding:60px 0;*/
+/*    !*background:var(--dark)*!*/
+/*}*/
 
 .hero-grid{
     display: flex;
@@ -389,7 +390,7 @@ section{
     position:relative;
     display:inline-block;
     /*font-size: 38px;*/
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     color: #ffffff;
     letter-spacing: 1px;
 }
@@ -456,6 +457,7 @@ section{
     height:550px;
     border-radius:16px;
 }
+
 .problems-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -600,7 +602,7 @@ section{
     align-items: start;
     column-gap: 30px;
     grid-template-columns:repeat(3,1fr);
-    margin-top:50px
+    margin-top:20px
 }
 
 .card,.service{
@@ -907,7 +909,7 @@ button {
 }
 
 .old-price {
-    font-size: 48px;
+    font-size: 38px;
     color: var(--white);
     position: relative;
 }
@@ -941,7 +943,7 @@ button {
 /* НОВА ЦІНА */
 .new-price {
     margin-top: 10px;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: bold;
     color: #ff003c;
 
@@ -986,8 +988,8 @@ button {
     header{
         height:90px
     }
-    .header-menu-item:nth-last-child(5) {
-        margin-top: 15px;
+    .header-menu-item:nth-last-child(6) {
+        margin-top: 35px;
     }
     .circle{
         margin-bottom: 50px;
@@ -1028,6 +1030,10 @@ button {
         text-align: center;
         align-items: center;
 
+    }
+    .problem-img{
+        width:250px;
+        height:450px;
     }
 
     .problem-card{
@@ -1094,6 +1100,15 @@ button {
     .book-img{
         width: 300px;
 
+    }
+    .old-price {
+        font-size: 26px;
+    }
+    .new-price{
+        font-size: 34px;
+    }
+    .meal-generator-img {
+        max-height: 200px;
     }
 }
 
@@ -1228,7 +1243,7 @@ select, input {
 
 .meal-generator-img {
     width: 100%;
-    height: 300px;
+    max-height: 300px;
     border-radius: 15px;
     margin-top: 10px;
     margin-bottom: 30px;
