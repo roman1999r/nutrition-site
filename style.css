@@ -161,7 +161,7 @@ section {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     color: white;
-    margin-left: 50px;
+    margin-left: 10px;
 
 }
 
@@ -743,6 +743,10 @@ footer{
     align-items:center
 }
 
+.footer-span{
+    color:var(--red)
+}
+
 
 .socials a{color:var(--gray);margin-left:20px;text-decoration:none}
 
@@ -841,7 +845,16 @@ footer{
     color: var(--black);
 }
 
-
+.socials{
+    display: flex;
+    flex-direction: column;
+}
+.footer-link{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 /* Mobile */
 
 .reviews-card {
@@ -968,6 +981,7 @@ button {
                 0 0 20px #ff003c,
                 0 0 30px #ff003c;
     }
+
 }
 
 
@@ -1031,10 +1045,6 @@ button {
         align-items: center;
 
     }
-    .problem-img{
-        width:250px;
-        height:450px;
-    }
 
     .problem-card{
         /*margin-inline: 100px;*/
@@ -1043,7 +1053,10 @@ button {
         text-align: center;
         /*padding: 25px;*/
     }
-
+    .problem-img{
+        width: 80%;
+        height: auto;
+    }
 
     .problem-card h3 {
         font-size: 12px;
@@ -1078,25 +1091,11 @@ button {
         height:150px;
     }
     .motivation-card-image{
-        width: 350px;
-        height: 450px;
+        /*width: 350px;*/
+        /*height: 450px;*/
         border-radius: 16px;
     }
 
-    /*.footer-inner{*/
-    /*    margin-top: 100px;*/
-    /*}*/
-
-    .socials{
-        display: flex;
-        flex-direction: column;
-    }
-    .footer-link{
-        display: flex;
-        column-gap: 10px;
-        justify-content: center;
-        align-items: center;
-    }
     .book-img{
         width: 300px;
 
@@ -1110,6 +1109,10 @@ button {
     .meal-generator-img {
         max-height: 200px;
     }
+
+    /*.text-correct {*/
+    /*    font-size:20px;*/
+    /*}*/
 }
 
 /*@media(max-width:768px){*/
